@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(#800832, #fff7f9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+            max-width: 1000px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px; /* Limit max width for better layout */
+        }
+
+        .contact-left-title {
+            margin-bottom: 20px;
+        }
+
+        .contact-left-title h2 {
+            font-weight: 600;
+            color: #760636;
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contact-left-title hr {
+            border: none;
+            width: 80px;
+            height: 4px;
+            background-color: #a363aa;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .contact-inputs {
+            width: 100%;
+            height: 45px;
+            border: 1px solid #ddd;
+            outline: none;
+            padding-left: 15px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-inputs:focus {
+            border-color: #a363aa;
+        }
+
+        textarea {
+            width: 100%;
+            resize: vertical;
+            height: 150px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-weight: 500;
+            color: #666;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #a363aa;
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            border: none;
+            background-color: #a363aa;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #8e2b8a;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in Touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="de64e660-ca25-4cf2-841b-c7353063e0d2">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

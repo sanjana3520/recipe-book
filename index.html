@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Healthy Bites: Campus Recipe Book</h1>
+        <nav>
+            <ul>
+                <li><a href="#add-recipe">Add Recipe</a></li>
+                <li><a href="login.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="meal-search">
+            <h2>Find Meals For Your Ingredients</h2>
+            <div class="meal-search-box">
+                <input type="text" id="search-input" placeholder="Enter an ingredient or recipe name">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div class="meal-result" id="meal-result">
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <div class="add-recipe-container" id="add-recipe">
+        <h2>Add a New Recipe</h2>
+        <form id="add-recipe-form">
+            <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+            <textarea id="ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+            <textarea id="instructions" placeholder="Recipe Instructions" required></textarea>
+            <input type="file" id="recipe-photo" accept="image/*" required>
+            <button type="submit">Add Recipe</button>
+        </form>
+    </div>
+    <div class="user-recipes-container">
+        <h2>Your Recipes</h2>
+        <div id="user-recipes-list">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
